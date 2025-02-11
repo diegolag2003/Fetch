@@ -1,0 +1,19 @@
+.imageLogo {
+    border-radius: 30px;
+}
+
+.login-form {
+    width: 500px;
+    height: 300px;
+    border-radius: 30px;
+}
+
+.centered-header {
+    text-align: center;
+}
+
+.centered-fields{
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+}

@@ -1,0 +1,19 @@
+.p-datatable .p-datatable-thead > tr > th.p-selection-column > div {
+    display: none !important;
+}
+.table-header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #3d464e;
+    border-radius: 8px;
+}
+
+
+body {
+    background-color: #252836; 
+    margin: 0; 
+    height: 100vh; 
+  }
