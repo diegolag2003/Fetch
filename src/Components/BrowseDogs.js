@@ -109,7 +109,7 @@ const BrowseDogs = () => {
     const handleLogout = async () => {
         try {
             await logoutUser();
-            navigate("/");
+            navigate("/Fetch");
         } catch (error) {
             console.error("Error logging out:", error);
         }

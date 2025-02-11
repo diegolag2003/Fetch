@@ -17,8 +17,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/Browse" element={<Browse/>} />
+        <Route path="/Fetch" element={<Login />} />
+        <Route path="/Fetch/Browse" element={<Browse/>} />
       </Routes>
     </Router>
   );
