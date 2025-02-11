@@ -32,15 +32,24 @@ const LoginForm = ({ toast }) => {
             if (!response.ok) {
                 throw new Error('Invalid name or email');
             }
-            return response.json();
+    
+            // Try to parse the JSON response
+            return response.text(); // Get the response as text first
         })
-        .then(() => {
-            navigate('/Browse'); // Redirect to the Browse page on successful login
+        .then(responseText => {
+            try {
+                const data = JSON.parse(responseText); // Attempt to parse the text into JSON
+                navigate('Browse'); // Redirect to the Browse page on successful login
+            } catch (e) {
+                // If parsing fails (i.e. if the response is "OK"), navigate anyway
+                navigate('Browse');
+            }
         })
         .catch(error => {
             toast.current.show({ severity: 'error', summary: 'Error', detail: error.message, life: 5000 });
         });
     };
+    
 
     return (
         <div className="flex justify-content-center align-items-center h-screen">
