@@ -39,10 +39,10 @@ const LoginForm = ({ toast }) => {
         .then(responseText => {
             try {
                 const data = JSON.parse(responseText); // Attempt to parse the text into JSON
-                navigate('Browse'); // Redirect to the Browse page on successful login
+                navigate('/Fetch/Browse'); // Redirect to the Browse page on successful login
             } catch (e) {
                 // If parsing fails (i.e. if the response is "OK"), navigate anyway
-                navigate('Browse');
+                navigate('/Fetch/Browse');
             }
         })
         .catch(error => {
